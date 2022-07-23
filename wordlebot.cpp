@@ -473,7 +473,7 @@ int main() {
     //first_guess = FiveLetterWord("SOARE");
     //Strategy = BestGuess_Simple;
     
-    WordleBot(true);
+    // WordleBot(true);
     //WordleBenchmark();
     FiveLetterWord best_starter_guess = findBestStarterGuess("dungleon_guesses.txt", "dungleon_solutions.txt");
     std::cout << best_starter_guess.to_s() << std::endl;
