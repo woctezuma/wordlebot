@@ -456,6 +456,13 @@ void WordleBenchmark() {
     std::cout << "Worst Word: " << worst_word.to_s() << " ("<<worst_case<<" guesses)"<<std::endl;
 }
 
+FiveLetterWord findBestStarterGuess(std::string guess_fname, std::string solution_fname) {
+    std::vector<FiveLetterWord> all_words = LoadWordList(guess_fname);
+    std::vector<FiveLetterWord> possible_words = LoadWordList(solution_fname);
+    FiveLetterWord best_starter_guess = BestGuess(all_words, possible_words);
+    return best_starter_guess;
+}
+
 int main() {
     first_guess = FiveLetterWord("RAISE");
     Strategy = BestGuess_MinMax;
