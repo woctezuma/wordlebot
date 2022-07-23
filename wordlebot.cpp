@@ -475,6 +475,8 @@ int main() {
     
     WordleBot(true);
     //WordleBenchmark();
+    FiveLetterWord best_starter_guess = findBestStarterGuess("dungleon_guesses.txt", "dungleon_solutions.txt");
+    std::cout << best_starter_guess.to_s() << std::endl;
 
     //std::vector<FiveLetterWord> all_words = LoadWordList("wordlist_guesses.txt");
     //std::vector<FiveLetterWord> possible_words = LoadWordList("wordlist_solutions.txt");
